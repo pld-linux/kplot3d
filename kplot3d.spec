@@ -7,8 +7,8 @@ Group:		Applications/Graphics
 Group(de):	Applikationen/Grafik
 Group(pl):	Aplikacje/Grafika
 Source0:	%{name}-%{version}.tar.gz
-%description
 
+%description
 Kplot3d is tool for building 3d surface of function z = f(x,y).
 Support sdaded and grid ( with erasing of invisible lines ) modes,
 fast realtaime surface rotation, printing result image, save image or
@@ -19,7 +19,7 @@ data (in xyz format) to local file. For KDE.
 
 %build
 ./configure
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 cd po
 %{__make} 
 cd ..
