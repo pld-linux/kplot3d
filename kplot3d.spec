@@ -18,15 +18,15 @@ For KDE.
 
 %build
 ./configure
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 cd po
-make 
+%{__make} 
 cd ..
 
 %install
-make install
+%{__make} install
 cd po 
-make install
+%{__make} install
 
 %files
 /usr/share/doc/HTML/en/kplot3d
