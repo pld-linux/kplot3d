@@ -28,13 +28,13 @@ wynikowego obrazka, zapisywanie do pliku w formacie xyz.
 ./configure
 %{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 cd po
-%{__make} 
+%{__make}
 cd ..
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install
-cd po 
+cd po
 %{__make} install
 
 %clean
