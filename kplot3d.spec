@@ -5,10 +5,15 @@ Version:	0.70
 Release:	1
 License:	GPL
 Group:		Applications/Graphics
-Source0:	http://members.nbci.com/kplot3d/%{name}-%{version}.tar.gz
+# http://members.nbci.com/kplot3d/ is dead
+# http://members.xoom.com/kplot3d/ too
+Source0:	http://ftp.kde.com/Math_Science/Plotting/Kplot3d/%{name}-%{version}.tar.gz
 # Source0-md5:	d519ba0f0c7c84961bc1355c48d0e75d
-URL:		http://members.nbci.com/kplot3d/
+#URL:		http://members.nbci.com/kplot3d/
+BuildRequires:	kdelibs-devel < 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_htmldir	/usr/share/doc/kde/HTML
 
 %description
 Kplot3d is tool for building 3d surface of function z = f(x,y).
@@ -26,27 +31,29 @@ wynikowego obrazka, zapisywanie do pliku w formacie xyz.
 %setup -q
 
 %build
-./configure
-%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
-cd po
+kde_appsdir="%{_applnkdir}"; export kde_appsdir
+kde_htmldir="%{_htmldir}"; export kde_htmldir
+kde_icondir="%{_pixmapsdir}"; export kde_icondir
+%configure2_13 \
+	--disable-path-check
+
 %{__make}
-cd ..
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install
-cd po
-%{__make} install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%{_datadir}/doc/HTML/en/kplot3d
-%{_applnkdir}/Applications/kplot3d.kdelnk
-%{_datadir}/icons/kplot3d.xpm
-%{_datadir}/icons/mini/kplot3d.xpm
-%{_datadir}/locale/ru/LC_MESSAGES/kplot3d.mo
 %attr(755,root,root) %{_bindir}/kplot3d
-%{_datadir}/apps/kplot3d/pics/intro.jpg
+%{_applnkdir}/Applications/kplot3d.kdelnk
+%{_pixmapsdir}/kplot3d.xpm
+%{_pixmapsdir}/mini/kplot3d.xpm
+%{_datadir}/apps/kplot3d
