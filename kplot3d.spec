@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Graphics
 Source0:	http://members.nbci.com/kplot3d/%{name}-%{version}.tar.gz
+# Source0-md5:	d519ba0f0c7c84961bc1355c48d0e75d
 URL:		http://members.nbci.com/kplot3d/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
