@@ -1,10 +1,10 @@
-Summary: Kplot3d is KDE version of tool for building 3d surface of function z = f(x,y).
-Name: kplot3d
-Version: 0.70
-Release: 1
-Copyright: GPL
-Group: Applications/Graphics
-Source: kplot3d-0.70.tar.gz
+Summary:	Kplot3d is KDE version of tool for building 3d surface of function z = f(x,y).
+Name:		kplot3d
+Version:	0.70
+Release:	1
+License:	GPL
+Group:		Applications/Graphics
+Source:		kplot3d-0.70.tar.gz
 %description
 
 Kplot3d is tool for building 3d surface of function z = f(x,y).
@@ -14,7 +14,7 @@ printing result image, save image or data (in xyz format) to local file.
 For KDE.					
 
 %prep
-%setup
+%setup -q
 
 %build
 ./configure
