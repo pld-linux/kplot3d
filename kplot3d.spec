@@ -5,9 +5,6 @@ Version:	0.70
 Release:	1
 License:	GPL
 Group:		Applications/Graphics
-Group(de):	Applikationen/Grafik
-Group(pl):	Aplikacje/Grafika
-Group(pt):	Aplicações/Gráficos
 Source0:	http://members.nbci.com/kplot3d/%{name}-%{version}.tar.gz
 URL:		http://members.nbci.com/kplot3d/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
