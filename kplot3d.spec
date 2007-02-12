@@ -1,5 +1,5 @@
 Summary:	Kplot3d is KDE version of tool for building 3d surface of function z = f(x,y)
-Summary(pl):	Kplot3d jest wersj± KDE narzêdzia do rysowania w 3D powierzchni z = f(x,y)
+Summary(pl.UTF-8):   Kplot3d jest wersjÄ… KDE narzÄ™dzia do rysowania w 3D powierzchni z = f(x,y)
 Name:		kplot3d
 Version:	0.70
 Release:	1
@@ -21,9 +21,9 @@ Support shaded and grid (with erasing of invisible lines) modes, fast
 realtaime surface rotation, printing result image, save image or data
 (in xyz format) to local file. For KDE.
 
-%description -l pl
-Kplot3d jest narzêdziem KDE do tworzenia wykresów 3D powierzchni
-zadanych funkcj± z = f(x,y). Tryb cieniowany i siatkowy (z usuwaniem
+%description -l pl.UTF-8
+Kplot3d jest narzÄ™dziem KDE do tworzenia wykresÃ³w 3D powierzchni
+zadanych funkcjÄ… z = f(x,y). Tryb cieniowany i siatkowy (z usuwaniem
 niewidocznych linii), szybkie obroty powierzchni, drukowanie
 wynikowego obrazka, zapisywanie do pliku w formacie xyz.
 
